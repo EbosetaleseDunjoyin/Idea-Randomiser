@@ -80,6 +80,14 @@ export default function App() {
             </span>
             <span className="mode">{MODE_LABEL[kind]}</span>
           </div>
+          <div className="result-slot" aria-live="polite">
+            {winner && (
+              <div className="result" key={state.runId}>
+                <span className="result-label">The winner is</span>
+                <p className="result-text">{winner.text}</p>
+              </div>
+            )}
+          </div>
           <div className="stage" key={kind}>
             <Stage
               kind={kind}
@@ -99,14 +107,6 @@ export default function App() {
               Every idea has been picked once. Turn off “No repeats” or start over.
             </p>
           )}
-          <div className="result-slot" aria-live="polite">
-            {winner && (
-              <div className="result" key={state.runId}>
-                <span className="result-label">The winner is</span>
-                <p className="result-text">{winner.text}</p>
-              </div>
-            )}
-          </div>
         </section>
 
         <section className="entry-card" aria-label="Your ideas">

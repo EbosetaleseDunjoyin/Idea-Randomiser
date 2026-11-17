@@ -396,7 +396,7 @@ button:disabled {
 
 .result {
   max-width: 520px;
-  margin: 14px auto 0;
+  margin: 8px auto 4px;
   padding: 16px 20px;
   border: 1px solid #ffd2b8;
   border-radius: 18px;
